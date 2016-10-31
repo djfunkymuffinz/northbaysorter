@@ -14,3 +14,13 @@ let csv_to_students file_name =
       Student.add_friends std (f1::f2::[f3])
    )) (List.tl str_list) in
    s_list
+
+let is_student_happy s s_list =
+   List.exists (fun e_s -> (List.mem (Student.name e_s) (Student.friends s))) s_list
+
+let is_valid_group gender s_list =
+   List.fold_left (fun acc fl_s -> (is_student_happy fl_s s_list) && Student.gender fl_s = gender && acc) true s_list
+
+
+let students s_list =
+   List.map (fun m_s -> Student.name m_s) s_list
