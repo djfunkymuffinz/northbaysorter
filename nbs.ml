@@ -23,9 +23,10 @@ let lines_to_array lines =
 let csv_parse file =
    let lines = lines_to_array (read_file file) in
    List.map (fun m_l -> 
-      let s = Student (String.trim (List.nth m_l 2)^" "^String.trim (List.nth m_l 1)) in
-      let f1 = Student (String.trim (List.nth m_l 4)^" "^String.trim (List.nth m_l 3)) in
-      let f2 = Student (String.trim (List.nth m_l 6)^" "^String.trim (List.nth m_l 5)) in
-      let f3 = Student (String.trim (List.nth m_l 8)^" "^String.trim (List.nth m_l 7)) in
+      let reg = Str.regexp "\"" in
+      let s = Student ((Str.global_replace reg "" (String.trim (List.nth m_l 2)))^" "^(Str.global_replace reg "" (String.trim (List.nth m_l 1)))) in
+      let f1 = Student ((Str.global_replace reg "" (String.trim (List.nth m_l 4)))^" "^(Str.global_replace reg "" (String.trim (List.nth m_l 3)))) in
+      let f2 = Student ((Str.global_replace reg "" (String.trim (List.nth m_l 6)))^" "^(Str.global_replace reg "" (String.trim (List.nth m_l 5)))) in
+      let f3 = Student ((Str.global_replace reg "" (String.trim (List.nth m_l 8)))^" "^(Str.global_replace reg "" (String.trim (List.nth m_l 7)))) in
       (s,[f1;f2;f3])
    ) lines
