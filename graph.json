@@ -1,0 +1,284 @@
+<svg width="960" height="600"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+var graph = {
+"nodes": [
+{"id": "jaylynn dalton", "group": 1},
+{"id": "hanna sterling", "group": 1},
+{"id": "emily vondenbosch", "group": 1},
+{"id": "pierville esther", "group": 1},
+{"id": "bria greene", "group": 1},
+{"id": "jennifer garcia", "group": 1},
+{"id": "endiyah conway", "group": 1},
+{"id": "tabitha shuler", "group": 1},
+{"id": "amanda dennis", "group": 1},
+{"id": "jalyn stafford", "group": 1},
+{"id": "selena reed", "group": 1},
+{"id": "destiny williams", "group": 1},
+{"id": "brianna greene", "group": 1},
+{"id": "destiny lively", "group": 1},
+{"id": "briza ramirez", "group": 1},
+{"id": "pasiley tyler", "group": 1},
+{"id": "jazmin berduo", "group": 1},
+{"id": "tiana dobson", "group": 1},
+{"id": "delanie henry", "group": 1},
+{"id": "danyah kearse", "group": 1},
+{"id": "skyla butler", "group": 1},
+{"id": "rachel bartholomew", "group": 1},
+{"id": "ashlyn stafford", "group": 1},
+{"id": "shayla brown", "group": 1},
+{"id": "jalyn stock", "group": 1},
+{"id": "cassandra brey", "group": 1},
+{"id": "megan stubbs", "group": 1},
+{"id": "jayla murray", "group": 1},
+{"id": "portia spence", "group": 1},
+{"id": "jayonia jackson", "group": 1},
+{"id": "brianna conley", "group": 1},
+{"id": "angel evans", "group": 1},
+{"id": "destiny everage", "group": 1},
+{"id": "journey cephas", "group": 1},
+{"id": "jodie griep", "group": 1},
+{"id": "cindy diehl", "group": 1},
+{"id": "cassidy stubbs", "group": 1},
+{"id": "lena tolson", "group": 1},
+{"id": "kaitlyn wheatley", "group": 1},
+{"id": "rachael bassford", "group": 1},
+{"id": "meredith camacho", "group": 1},
+{"id": "caroline hill", "group": 1},
+{"id": "sarah wencloff", "group": 1},
+{"id": "hope kraus", "group": 1},
+{"id": "kayla holmes", "group": 1},
+{"id": "mackenzie covey", "group": 1},
+{"id": "alexis bates", "group": 1},
+{"id": "alexis wilson", "group": 1},
+{"id": "keit ayala", "group": 1},
+{"id": "maleaha webb", "group": 1},
+{"id": "aubrie meredith", "group": 1},
+{"id": "hope hammond", "group": 1},
+{"id": "mikala harrison", "group": 1},
+{"id": "nevaeh gibbs", "group": 1}
+],
+"links": [
+{"source": "jaylynn dalton", "target": "cindy diehl", "value": 1},
+{"source": "jaylynn dalton", "target": "caroline hill", "value": 1},
+{"source": "jaylynn dalton", "target": "nevaeh gibbs", "value": 1},
+{"source": "hanna sterling", "target": "endiyah conway", "value": 1},
+{"source": "hanna sterling", "target": "brianna greene", "value": 1},
+{"source": "emily vondenbosch", "target": "bria greene", "value": 1},
+{"source": "emily vondenbosch", "target": "brianna greene", "value": 1},
+{"source": "emily vondenbosch", "target": "hanna sterling", "value": 1},
+{"source": "pierville esther", "target": "endiyah conway", "value": 1},
+{"source": "pierville esther", "target": "shayla brown", "value": 1},
+{"source": "pierville esther", "target": "jayla murray", "value": 1},
+{"source": "bria greene", "target": "brianna greene", "value": 1},
+{"source": "bria greene", "target": "emily vondenbosch", "value": 1},
+{"source": "bria greene", "target": "hanna sterling", "value": 1},
+{"source": "jennifer garcia", "target": "hanna sterling", "value": 1},
+{"source": "endiyah conway", "target": "jayla murray", "value": 1},
+{"source": "endiyah conway", "target": "shayla brown", "value": 1},
+{"source": "endiyah conway", "target": "pierville esther", "value": 1},
+{"source": "tabitha shuler", "target": "endiyah conway", "value": 1},
+{"source": "tabitha shuler", "target": "bria greene", "value": 1},
+{"source": "tabitha shuler", "target": "brianna greene", "value": 1},
+{"source": "amanda dennis", "target": "meredith camacho", "value": 1},
+{"source": "amanda dennis", "target": "rachael bassford", "value": 1},
+{"source": "amanda dennis", "target": "jalyn stafford", "value": 1},
+{"source": "jalyn stafford", "target": "meredith camacho", "value": 1},
+{"source": "jalyn stafford", "target": "rachael bassford", "value": 1},
+{"source": "jalyn stafford", "target": "amanda dennis", "value": 1},
+{"source": "selena reed", "target": "brianna conley", "value": 1},
+{"source": "selena reed", "target": "jazmin berduo", "value": 1},
+{"source": "destiny williams", "target": "endiyah conway", "value": 1},
+{"source": "destiny williams", "target": "brianna greene", "value": 1},
+{"source": "destiny williams", "target": "shayla brown", "value": 1},
+{"source": "brianna greene", "target": "destiny williams", "value": 1},
+{"source": "brianna greene", "target": "bria greene", "value": 1},
+{"source": "brianna greene", "target": "hanna sterling", "value": 1},
+{"source": "briza ramirez", "target": "jennifer garcia", "value": 1},
+{"source": "briza ramirez", "target": "jayonia jackson", "value": 1},
+{"source": "pasiley tyler", "target": "hanna sterling", "value": 1},
+{"source": "pasiley tyler", "target": "brianna greene", "value": 1},
+{"source": "jazmin berduo", "target": "skyla butler", "value": 1},
+{"source": "jazmin berduo", "target": "cassidy stubbs", "value": 1},
+{"source": "jazmin berduo", "target": "cassandra brey", "value": 1},
+{"source": "tiana dobson", "target": "danyah kearse", "value": 1},
+{"source": "tiana dobson", "target": "cindy diehl", "value": 1},
+{"source": "delanie henry", "target": "hanna sterling", "value": 1},
+{"source": "delanie henry", "target": "ashlyn stafford", "value": 1},
+{"source": "danyah kearse", "target": "tiana dobson", "value": 1},
+{"source": "danyah kearse", "target": "nevaeh gibbs", "value": 1},
+{"source": "skyla butler", "target": "portia spence", "value": 1},
+{"source": "skyla butler", "target": "jazmin berduo", "value": 1},
+{"source": "skyla butler", "target": "ashlyn stafford", "value": 1},
+{"source": "rachel bartholomew", "target": "lena tolson", "value": 1},
+{"source": "ashlyn stafford", "target": "skyla butler", "value": 1},
+{"source": "ashlyn stafford", "target": "rachael bassford", "value": 1},
+{"source": "ashlyn stafford", "target": "delanie henry", "value": 1},
+{"source": "shayla brown", "target": "endiyah conway", "value": 1},
+{"source": "shayla brown", "target": "jayla murray", "value": 1},
+{"source": "jalyn stock", "target": "hope kraus", "value": 1},
+{"source": "jalyn stock", "target": "amanda dennis", "value": 1},
+{"source": "jalyn stock", "target": "mikala harrison", "value": 1},
+{"source": "cassandra brey", "target": "megan stubbs", "value": 1},
+{"source": "cassandra brey", "target": "skyla butler", "value": 1},
+{"source": "cassandra brey", "target": "jazmin berduo", "value": 1},
+{"source": "megan stubbs", "target": "cassandra brey", "value": 1},
+{"source": "megan stubbs", "target": "rachael bassford", "value": 1},
+{"source": "megan stubbs", "target": "jayonia jackson", "value": 1},
+{"source": "jayla murray", "target": "endiyah conway", "value": 1},
+{"source": "jayla murray", "target": "shayla brown", "value": 1},
+{"source": "jayla murray", "target": "pierville esther", "value": 1},
+{"source": "portia spence", "target": "skyla butler", "value": 1},
+{"source": "portia spence", "target": "kayla holmes", "value": 1},
+{"source": "portia spence", "target": "jaylynn dalton", "value": 1},
+{"source": "jayonia jackson", "target": "brianna conley", "value": 1},
+{"source": "jayonia jackson", "target": "hanna sterling", "value": 1},
+{"source": "jayonia jackson", "target": "journey cephas", "value": 1},
+{"source": "brianna conley", "target": "journey cephas", "value": 1},
+{"source": "brianna conley", "target": "shayla brown", "value": 1},
+{"source": "angel evans", "target": "maleaha webb", "value": 1},
+{"source": "angel evans", "target": "nevaeh gibbs", "value": 1},
+{"source": "angel evans", "target": "brianna greene", "value": 1},
+{"source": "destiny everage", "target": "rachel bartholomew", "value": 1},
+{"source": "destiny everage", "target": "bria greene", "value": 1},
+{"source": "destiny everage", "target": "brianna conley", "value": 1},
+{"source": "journey cephas", "target": "tiana dobson", "value": 1},
+{"source": "journey cephas", "target": "danyah kearse", "value": 1},
+{"source": "jodie griep", "target": "mikala harrison", "value": 1},
+{"source": "jodie griep", "target": "hope kraus", "value": 1},
+{"source": "jodie griep", "target": "jalyn stock", "value": 1},
+{"source": "cindy diehl", "target": "nevaeh gibbs", "value": 1},
+{"source": "cindy diehl", "target": "tiana dobson", "value": 1},
+{"source": "cindy diehl", "target": "danyah kearse", "value": 1},
+{"source": "lena tolson", "target": "rachael bassford", "value": 1},
+{"source": "lena tolson", "target": "ashlyn stafford", "value": 1},
+{"source": "kaitlyn wheatley", "target": "alexis wilson", "value": 1},
+{"source": "kaitlyn wheatley", "target": "kayla holmes", "value": 1},
+{"source": "kaitlyn wheatley", "target": "jodie griep", "value": 1},
+{"source": "jaylynn dalton", "target": "alexis wilson", "value": 1},
+{"source": "jaylynn dalton", "target": "caroline hill", "value": 1},
+{"source": "jaylynn dalton", "target": "nevaeh gibbs", "value": 1},
+{"source": "rachael bassford", "target": "cassidy stubbs", "value": 1},
+{"source": "rachael bassford", "target": "ashlyn stafford", "value": 1},
+{"source": "meredith camacho", "target": "ashlyn stafford", "value": 1},
+{"source": "meredith camacho", "target": "jalyn stafford", "value": 1},
+{"source": "meredith camacho", "target": "amanda dennis", "value": 1},
+{"source": "caroline hill", "target": "jaylynn dalton", "value": 1},
+{"source": "caroline hill", "target": "nevaeh gibbs", "value": 1},
+{"source": "caroline hill", "target": "sarah wencloff", "value": 1},
+{"source": "sarah wencloff", "target": "caroline hill", "value": 1},
+{"source": "sarah wencloff", "target": "meredith camacho", "value": 1},
+{"source": "sarah wencloff", "target": "jodie griep", "value": 1},
+{"source": "hope kraus", "target": "mikala harrison", "value": 1},
+{"source": "hope kraus", "target": "jalyn stock", "value": 1},
+{"source": "hope kraus", "target": "amanda dennis", "value": 1},
+{"source": "kayla holmes", "target": "skyla butler", "value": 1},
+{"source": "kayla holmes", "target": "mikala harrison", "value": 1},
+{"source": "kayla holmes", "target": "jodie griep", "value": 1},
+{"source": "mackenzie covey", "target": "meredith camacho", "value": 1},
+{"source": "mackenzie covey", "target": "jalyn stafford", "value": 1},
+{"source": "mackenzie covey", "target": "ashlyn stafford", "value": 1},
+{"source": "alexis bates", "target": "meredith camacho", "value": 1},
+{"source": "alexis bates", "target": "hope hammond", "value": 1},
+{"source": "alexis bates", "target": "jalyn stafford", "value": 1},
+{"source": "alexis wilson", "target": "keit ayala", "value": 1},
+{"source": "keit ayala", "target": "destiny lively", "value": 1},
+{"source": "keit ayala", "target": "alexis wilson", "value": 1},
+{"source": "maleaha webb", "target": "angel evans", "value": 1},
+{"source": "maleaha webb", "target": "nevaeh gibbs", "value": 1},
+{"source": "aubrie meredith", "target": "mikala harrison", "value": 1},
+{"source": "aubrie meredith", "target": "emily vondenbosch", "value": 1},
+{"source": "aubrie meredith", "target": "meredith camacho", "value": 1},
+{"source": "hope hammond", "target": "alexis bates", "value": 1},
+{"source": "hope hammond", "target": "jayla murray", "value": 1},
+{"source": "mikala harrison", "target": "hope kraus", "value": 1},
+{"source": "mikala harrison", "target": "jalyn stock", "value": 1},
+{"source": "mikala harrison", "target": "jodie griep", "value": 1},
+{"source": "nevaeh gibbs", "target": "danyah kearse", "value": 1},
+{"source": "nevaeh gibbs", "target": "cindy diehl", "value": 1},
+{"source": "nevaeh gibbs", "target": "endiyah conway", "value": 1},
+{"source": "cassidy stubbs", "target": "rachael bassford", "value": 1},
+{"source": "cassidy stubbs", "target": "skyla butler", "value": 1},
+{"source": "cassidy stubbs", "target": "cassandra brey", "value": 1}
+]
+}
+
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height");
+
+var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+var simulation = d3.forceSimulation()
+    .force("link", d3.forceLink().id(function(d) { return d.id; }))
+    .force("charge", d3.forceManyBody())
+    .force("center", d3.forceCenter(width / 2, height / 2));
+
+  var link = svg.append("g")
+      .attr("class", "links")
+    .selectAll("line")
+    .data(graph.links)
+    .enter().append("line")
+      .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+
+  var node = svg.append("g")
+      .attr("class", "nodes")
+    .selectAll("circle")
+    .data(graph.nodes)
+    .enter().append("circle")
+      .attr("r", 5)
+      .attr("fill", function(d) { return color(d.group); })
+      .call(d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended));
+
+  node.append("title")
+      .text(function(d) { return d.id; });
+
+  simulation
+      .nodes(graph.nodes)
+      .on("tick", ticked);
+
+  simulation.force("link")
+      .links(graph.links);
+
+  function ticked() {
+    link
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    node
+        .attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
+  }
+
+function dragstarted(d) {
+  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(d) {
+  d.fx = d3.event.x;
+  d.fy = d3.event.y;
+}
+
+function dragended(d) {
+  if (!d3.event.active) simulation.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
+
