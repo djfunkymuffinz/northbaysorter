@@ -42,6 +42,17 @@ let get_name student =
       |  Student s -> s
       |  Leader l -> l
 
+let json_to_g filename = 
+   let lines = read_file filename in
+   let lines = List.tl (List.tl lines) in
+   let lines = List.map (fun str ->
+      let reg = Str.regexp ".*id...." in
+      let tmp = Str.replace_first reg "" str in
+      let reg = Str.regexp "\".*" in
+      Str.replace_first reg "" tmp
+   ) lines in
+   lines
+
 let g_to_json g =
    let (v,e) = g in
    let str = List.fold_left (fun acc f -> acc^"{\"id\": \""^(get_name f)^"\", \"group\": 1},\n") "{\n\"nodes\": [\n" v in
